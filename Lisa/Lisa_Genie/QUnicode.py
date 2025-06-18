@@ -256,7 +256,3 @@ GPT = -1740614400.0
 def heure_locale() -> tuple[int,float]:
     minute = (int(time.time() + GPT) % 3600) // 60
     return minute, (time.time() + GPT)
-
-import queue
-queue = queue.Queue()
-queue.get()
