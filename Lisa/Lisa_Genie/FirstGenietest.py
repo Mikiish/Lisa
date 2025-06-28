@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 
 client = OpenAI(
-        api_key="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"
+        api_key=""
     )
 
 # ==================== 2) Initialisation du state ====================

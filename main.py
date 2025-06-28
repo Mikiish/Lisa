@@ -2,7 +2,7 @@ import subprocess
 import signal
 import sys
 import os
-from Casino1031 import casino_hex_prime
+import Casino1031
 
 # Liste pour stocker les résultats
 resultsForPS = []

@@ -187,15 +187,6 @@ if __name__ == "__main__":
 
     ### Generation d'une liste de caractère unicode pour gérer les entrées vides.
     ### Initialisation du client OpenAI
-    ### ⚠️ Les assistants utilisent gpt-4.5-preview comme modèle ⚠️
-    ###[⚠️ avertissement sur le prix des requetes pour ce modèle⚠️]
-    ###     - Initialisation + 1 vœu ≤ 2500 tokens ~0,25€
-    ###     - Conversation complete (3 messages) ≤ 10000 tokens ~1,00€
-    ###     - Ces valeurs sont des valeurs "maximale" observées (et non des valeurs moyennes)
-    ###     - Vous pouvez remplacer le modèle par "gpt-4o" ou "gpt-4o-2024-11-20" pour réduire le cout des requetes a ~0.01€,
-    ###       mais les résultats ne serons pas aussi bons.
-    ###     - Il suffit pour cela d'ajouter le parametre "modele" juste en dessous de "assistant_id"
-    ###
     wish_count = 3
     celestial = qe.QuantumEmoji(intervals = qe.INTERVALS_EMOJI_CONCRET)
     big_unicode_list, ccemoji, pensee = generate_emoji(intervals = celestial.get_universe())
@@ -219,8 +210,8 @@ if __name__ == "__main__":
         "asst_5vb7ifHiqRZSDdZvCDVlgPsk",
         instructions=f"{"Oh! Oh! Oh... 🃏!\n"+pensee}\n✨ Le mieux est l'ennemi du bien. {GENIE}",
         model="gpt-4.5-preview",
-        temperature = 1.13,
-        top_p = 0.9997,
+        temperature = 1.021,
+        top_p = 1.0,
     )
     print(f"\nOh! Oh! Oh... 🃏! **Le génie pense...**")
     while wish_count > 0:
