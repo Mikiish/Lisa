@@ -270,8 +270,8 @@ if __name__ == "__main__":
                 print(f"Casino n°{i + 1}: {hex(casino)}")
             break
         else:
-            discovered_casinos.append(new_prime)
-            print("⚠️ Le nombre construit n'est pas premier, mais il est conservé pour analyse.")
+            #discovered_casinos.append(new_prime)
+            print("⚠️ Le nombre construit n'est pas premier, mais il est conservé pour analyse. (ou pas)")
 
         print(
             f"End Prime initial : {hex(initial_prime)}\nEnd Prime secondary : {hex(secondary_prime)}\nPrime create : {hex(new_prime)}")
