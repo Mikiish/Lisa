@@ -1,5 +1,6 @@
 import random, threading, time, os, sympy
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import PrimeMutationFilter as pmf
 import spectral
@@ -241,20 +242,21 @@ if __name__ == "__main__":
         range_min, range_max = min(range_min, range_max), max(range_min,
                                                               range_max)  # ✅ Toujours s'assurer que range_min < range_max
 
+        small_prime = pd.DataFrame()
+
         # 📌 Exécuter la recherche en s'assurant que l'intervalle est valide
         if range_min < range_max:
             with quantum_lock:
                 small_prime = newgptint.find_prime_cycles(61681, (61681 ** 2), max_n=131, max_attempts=42 * (8 ** 6))
 
-        if not small_prime.empty:
-            # Trouver l'index du plus petit cycle (n)
-            min_cycle_index = small_prime["n"].idxmin()
-            selected_prime = int(small_prime.loc[min_cycle_index, "p"])  # Prendre le p associé au plus petit cycle
-            print(
-                f"✨ Petit nombre premier sélectionné: {hex(selected_prime)} (cycle: {small_prime.loc[min_cycle_index, 'n']})")
-            nombre = selected_prime
-
-        else:
+            if not small_prime.empty:
+                # Trouver l'index du plus petit cycle (n)
+                min_cycle_index = small_prime["n"].idxmin()
+                selected_prime = int(small_prime.loc[min_cycle_index, "p"])  # Prendre le p associé au plus petit cycle
+                print(
+                    f"✨ Petit nombre premier sélectionné: {hex(selected_prime)} (cycle: {small_prime.loc[min_cycle_index, 'n']})")
+                nombre = selected_prime
+        if small_prime.empty:
             print(f"⚠️ Aucun petit nombre trouvé, utilisation de {hex(nombre)} par défaut.")
 
         # 🔄 Construire le nouveau nombre hybride
