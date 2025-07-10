@@ -121,7 +121,9 @@ def adversarial_cycle(initial_prime, history_storage, color):
 
         mutate_number = measured_prime
         hex_mutate_number = hex(mutate_number).upper()[2:]
+        start_time = time.perf_counter()
         last_prime, stability, iterations, mutation_history = spectral.mutate_number(hex_mutate_number)
+        print(f"spectral.mutate_number took {time.perf_counter() - start_time:.2f}s")
 
         if not last_prime:
             print("❌ Aucun nombre premier trouvé après mutation, arrêt du processus.")
@@ -225,8 +227,10 @@ if __name__ == "__main__":
         thread1.start()
         thread2.start()
 
-        thread1.join()
-        thread2.join()
+        thread1.join(timeout=60)
+        thread2.join(timeout=60)
+        if thread1.is_alive() or thread2.is_alive():
+            print("Warning: a thread is taking unusually long.")
 
         print("✅ Les deux threads ont terminé un cycle.")
         try:
@@ -244,7 +248,9 @@ if __name__ == "__main__":
         # 📌 Exécuter la recherche en s'assurant que l'intervalle est valide
         if range_min < range_max:
             with quantum_lock:
+                start_time = time.perf_counter()
                 small_prime = newgptint.find_prime_cycles(61681, (61681 ** 2), max_n=131, max_attempts=42 * (8 ** 6))
+                print(f"newgptint.find_prime_cycles took {time.perf_counter() - start_time:.2f}s")
 
         if not small_prime.empty:
             # Trouver l'index du plus petit cycle (n)
