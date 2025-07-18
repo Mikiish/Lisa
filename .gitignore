@@ -3,10 +3,9 @@
 .env/
 .venv
 .venv/
-Lisa/.env
-Lisa/.env/
-Lisa/.venv
-Lisa/.venv/
+Lisa_AntModule/Plots/Molecules
+Lisa_AntModule/Plots/Molecules/
+Lisa_AntModule/export_conversation.txt
 
 # Ignorer tous les fichiers __pycache__
 __pycache__/
