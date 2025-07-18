@@ -1,4 +1,4 @@
-*# Ignorer les dossiers de venvs
+# Ignorer les dossiers de venvs
 .env
 .env/
 .venv
@@ -43,5 +43,3 @@ Lisa/Lisa_Genie/GenieLogs
 Lib
 Logs
 Scripts
-
-
