@@ -2,7 +2,7 @@ import random, time, openai, os, sympy, json, threading, queue, unicodedata
 from openai import OpenAI
 from openai import AssistantEventHandler
 from sympy import Symbol, Rational, I
-from sympy.core.symbol import _symbol
+from sympy.core.symbol import Symbol
 import numpy as np
 import QuantumEmojiv2 as qe
 from QuantumEmojiv2 import QuantumEmoji
@@ -209,7 +209,7 @@ if __name__ == "__main__":
     legenie_pense = client.beta.assistants.update(
         "asst_5vb7ifHiqRZSDdZvCDVlgPsk",
         instructions=f"{"Oh! Oh! Oh... 🃏!\n"+pensee}\n✨ Le mieux est l'ennemi du bien. {GENIE}",
-        model="gpt-4.5-preview",
+        model="gpt-4.1",
         temperature = 1.021,
         top_p = 1.0,
     )
