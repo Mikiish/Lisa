@@ -6,6 +6,8 @@
 Lisa_AntModule/Plots/Molecules
 Lisa_AntModule/Plots/Molecules/
 Lisa_AntModule/export_conversation.txt
+Lisa_Genie/coucou
+Lisa_Genie/coucou/
 
 # Ignorer tous les fichiers __pycache__
 __pycache__/
@@ -42,3 +44,4 @@ Lisa/Lisa_Genie/GenieLogs
 Lib
 Logs
 Scripts
+
