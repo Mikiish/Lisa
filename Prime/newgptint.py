@@ -1,4 +1,5 @@
 import sympy
+import math
 import numpy as np
 import pandas as pd
 import time
@@ -110,8 +111,8 @@ if __name__ == "__main__":
     print(f"Is p1 Prime ? {is_p1prime}\nIs p2 Prime? {is_p2prime}")
 
     # Recherche des nombres premiers respectant la condition avec exécution parallèle
-    n_magique = int(61681 ** float((5*np.e)/7))
-    n_magique_plus = int(61681 ** float(np.e))
-    df_result = find_prime_cycles(n_magique, n_magique_plus, 99, 8 ** 10)
+    n_magique = int(math.pow(16, 4))
+    n_magique_plus = int(math.pow(16, 8))
+    df_result = find_prime_cycles(n_magique, n_magique_plus, 1024, 10 ** 8)
     print("\nNombres premiers trouvés respectant la condition :")
     print(df_result)

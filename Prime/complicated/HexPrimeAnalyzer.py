@@ -3,7 +3,7 @@ import numpy as np
 import random
 import array
 from sympy import factorint, isprime
-import IsPrime
+import primes.Prime.complicated.IsPrime as IsPrime
 
 # Définition de Phi2 en décimal
 phi2_dec = 0x96cae7

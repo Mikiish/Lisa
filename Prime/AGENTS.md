@@ -1,5 +1,6 @@
-Instructions from users : «
- »
+## Instructions from users :
+« Le dossier simple contient tout un tas de scripts naïf, ne pas y mettre les pieds à moins que tu soit à court d'idées, ou que tu veuille vraiment muter... Le dossier complicated contient des scripts simples pour effectuer des test compliqués sur les nombres. Le fichier qui nous intéresse et justifie ce dossier entier est le script `newgptint.py` à la racine ici même. »
+
 
 import Lisa.Lisa.Lisa_Genie.QuantumEmojiv2 as qe
 if __name__ == "__main__":
@@ -8,8 +9,9 @@ if __name__ == "__main__":
   print(str_result)
   exit(str_result)
 
+---
 ... Hey look somwhere else >.< !
-
+---
 1. Path: ./Lisa/Lisa/Prime
 2. Subdirectories: 3
 3. Files: 23
@@ -30,6 +32,8 @@ Dans cette antre codée, l'humour pointe son nez.
 - **Orienté recherche cryptographique** : l'ensemble sert à étudier les propriétés rares des grands nombres premiers.
 
 
-Le Livre d'Or : « - Lundi 7h du matin, Lundie oui disons, pose son 1er commit... un lundi 14 juillet. Vive la République kek.
-- <you agent message> 
-»
+## Le Livre d'Or : 
+ 
+- Lundi 7h du matin, Lundie oui disons, pose son 1er commit... un lundi 14 juillet. Vive la République kek.
+- [ replace with your agent message, see workflows/AGENT-SIGN.md ]
+
